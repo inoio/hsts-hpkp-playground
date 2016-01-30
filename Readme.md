@@ -7,6 +7,7 @@ play around and test different configurations!
 
 Setup
 -----
+0. Clone this repository: ```git clone https://github.com/mattelacchiato/hsts-hpkp-playground.git && cd hsts-hpkp-playground```
 1. Install [Vagrant](https://www.vagrantup.com/downloads.html)
 2. ? Install vagrant hostmananger?
 3. ```vagrant up```
@@ -17,7 +18,7 @@ Play
 ----
 You can jump into your vagrant box with ```vagrant ssh``` or ```ssh ssl-test.matthias-brandt.de```. Your pulic SSH key will be added to the box during provisioning.
 
-You can confugire your nginx server inside this project. The files in ```shared``` are shared with the vagrant box and linked to their destinations inside the box.
+You can configure your nginx server inside this project. The files in ```shared``` are shared with the vagrant box and linked to their destinations inside the box.
 
 Reload nginx from your host: ```vagrant ssh -c "sudo service nginx reload"```
 
@@ -26,8 +27,6 @@ If you want to find out your base64 fingerprint of your certificate, you can do 
 ```
 openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 ```
-
-You can find suggested implementations of HSTS and HPKP in the according branches.
 
 Troubleshooting
 ---------------

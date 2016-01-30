@@ -19,6 +19,9 @@ server {
     listen 443 ssl;
     server_name ssl-test.matthias-brandt.de;
     
+    # add_header Strict-Transport-Security 'max-age=31536000; includeSubdomains' always;
+    # add_header Public-Key-Pins 'pin-sha256="vDGd5BIsPtpEDVrOzMypcp9CjSQ8QIiIQq6iRg59UOg="; pin-sha256="Mfyz5Zy4hGa1yrs93hMGGPo57r42fM+mttvEmHuXIdI="; max-age=60; includeSubdomains; report-uri="https://www.example.net/hpkp-report"';
+    
     ssl_certificate /etc/nginx/ssl/ssl-test.matthias-brandt.de.crt;
     ssl_certificate_key /etc/nginx/ssl/ssl-test.matthias-brandt.de.key;
     
