@@ -10,7 +10,7 @@ Setup
 0. Clone this repository: ```git clone https://github.com/mattelacchiato/hsts-hpkp-playground.git && cd hsts-hpkp-playground```
 1. Install [Vagrant](https://www.vagrantup.com/downloads.html)
 2. ```vagrant plugin install vagrant-hostmanager```
-3. ```vagrant up```
+3. ```vagrant up``` <br/>
 This will add ssl-test.matthias-brandt.de to your ```/etc/hosts``` with the IP of this vagrant box. That's why the provisioning will ask for your root password.
 4. Open your browser with network inspector enabled and go to [ssl-test.matthias-brandt.de](ssl-test.matthias-brandt.de)
 
