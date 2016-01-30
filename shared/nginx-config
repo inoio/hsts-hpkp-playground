@@ -3,15 +3,6 @@ server {
     listen [::]:80 default_server ipv6only=on;
     server_name ssl-test.matthias-brandt.de;
 
-    root /usr/share/nginx/html;
-    index index.html index.htm;
-    location / {
-            try_files $uri $uri/ =404;
-    }
-    
-    #just disable caching for simpler testing (otherwise, you'll have to press shift+reload everytime)
-    if_modified_since off;
-    
     return 301 https://$server_name$request_uri;
 }
 
@@ -25,12 +16,11 @@ server {
     ssl_certificate /etc/nginx/ssl/ssl-test.matthias-brandt.de.crt;
     ssl_certificate_key /etc/nginx/ssl/ssl-test.matthias-brandt.de.key;
     
-    root /usr/share/nginx/html;
-    index index.html index.htm;
-    
     #just disable caching for simpler testing (otherwise, you'll have to press shift+reload everytime)
     if_modified_since off;
     
+    root /usr/share/nginx/html;
+    index index.html index.htm;    
     location / {
             try_files $uri $uri/ =404;
     }
