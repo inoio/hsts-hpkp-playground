@@ -40,6 +40,17 @@ All logfiles lay in ```shared/logs```, so you can easily do a ```tail -f shared/
 ### Console
 Always look into your browser console! Some errors will only be printed here (e.g. if you use an locally installed (root) cert).
 
+### Expected results
+To check if your changes are working, have a look at your network inspector. Here you can see the sent headers:
+
+![HSTS/HPKP headers](https://github.com/mattelacchiato/hsts-hpkp-playground/tree/master/img/headers.png)
+
+In the security tab in Firefox, you can see if your browser has accepted those headers and HSTS/HPKP is enabled for this connection:
+
+![HSTS/HPKP headers](https://github.com/mattelacchiato/hsts-hpkp-playground/tree/master/img/network-inspector.png)
+
+
+
 Troubleshooting
 ---------------
 
@@ -47,3 +58,4 @@ Troubleshooting
 
 In Firefox you can go to the history bar, select ssl-test.matthias-brandt.de and click "Forget about this site". 
 This will not only clean this cache, but also remove all HSTS/HPKP settings for this site.
+
