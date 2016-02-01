@@ -10,7 +10,7 @@ Feel free to play around and test different configurations!
 
 Setup
 -----
-0. Clone this repository: ```git clone https://github.com/mattelacchiato/hsts-hpkp-playground.git && cd hsts-hpkp-playground```
+0. Clone this repository: ```git clone https://github.com/inoio/hsts-hpkp-playground.git && cd hsts-hpkp-playground```
 1. Install [Vagrant](https://www.vagrantup.com/downloads.html)
 2. ```sudo vagrant plugin install vagrant-hostmanager```<br/>
 If you installed vagrant via dnf/yum you can use your package manager to install: ```dnf install vagrant-hostmanager```
@@ -46,11 +46,11 @@ Always look into your browser console! Some errors will only be printed here (e.
 ### Expected results
 To check if your changes are working, have a look at your network inspector. Here you can see the sent headers:
 
-![HSTS/HPKP headers](https://raw.githubusercontent.com/mattelacchiato/hsts-hpkp-playground/master/img/headers.png)
+![HSTS/HPKP headers](https://raw.githubusercontent.com/inoio/hsts-hpkp-playground/master/img/headers.png)
 
 In the security tab in Firefox, you can see if your browser has accepted those headers and HSTS/HPKP is enabled for this connection:
 
-![HSTS/HPKP headers](https://raw.githubusercontent.com/mattelacchiato/hsts-hpkp-playground/master/img/network-inspector.png)
+![HSTS/HPKP headers](https://raw.githubusercontent.com/inoio/hsts-hpkp-playground/master/img/network-inspector.png)
 
 
 
