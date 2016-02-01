@@ -44,7 +44,7 @@ All logfiles lay in ```shared/logs```, so you can easily do a ```tail -f shared/
 Always look into your browser console! Some errors will only be printed here (e.g. if you use an locally installed (root) cert).
 
 ### Expected results
-To check if your changes are working, have a look at your network inspector. Here you can see the sent headers:
+To check if your changes are working, have a look at your network inspector. Here you can see the sent headers after uncommenting the HSTS and HPKP header directives:
 
 ![HSTS/HPKP headers](https://raw.githubusercontent.com/inoio/hsts-hpkp-playground/master/img/headers.png)
 
