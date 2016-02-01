@@ -11,10 +11,15 @@ SHARED_FOLDER=/vagrant/shared
 
 mkdir -p $SSL_FOLDER
 
-rm /etc/nginx/sites-available/default
-rm $SSL_FOLDER/ssl-test.matthias-brandt.de.crt
-rm $SSL_FOLDER/ssl-test.matthias-brandt.de.key
-rm -rf /var/log/nginx
+#remove files which will be linked from our shared folder
+for i in \
+/etc/nginx/sites-available/default \
+$SSL_FOLDER/ssl-test.matthias-brandt.de.crt \
+$SSL_FOLDER/ssl-test.matthias-brandt.de.key \
+/var/log/nginx \
+; do
+    [ -e $i ] && rm -rf $i
+done
 
 ln -s $SHARED_FOLDER/nginx-config                    /etc/nginx/sites-available/default
 ln -s $SHARED_FOLDER/ssl-test.matthias-brandt.de.crt $SSL_FOLDER/ssl-test.matthias-brandt.de.crt
