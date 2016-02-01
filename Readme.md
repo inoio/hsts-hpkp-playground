@@ -43,11 +43,11 @@ Always look into your browser console! Some errors will only be printed here (e.
 ### Expected results
 To check if your changes are working, have a look at your network inspector. Here you can see the sent headers:
 
-![HSTS/HPKP headers](https://github.com/mattelacchiato/hsts-hpkp-playground/tree/master/img/headers.png)
+![HSTS/HPKP headers](https://raw.githubusercontent.com/mattelacchiato/hsts-hpkp-playground/master/img/headers.png)
 
 In the security tab in Firefox, you can see if your browser has accepted those headers and HSTS/HPKP is enabled for this connection:
 
-![HSTS/HPKP headers](https://github.com/mattelacchiato/hsts-hpkp-playground/tree/master/img/network-inspector.png)
+![HSTS/HPKP headers](https://raw.githubusercontent.com/mattelacchiato/hsts-hpkp-playground/master/img/network-inspector.png)
 
 
 
