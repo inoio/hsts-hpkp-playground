@@ -4,7 +4,9 @@ This project is intended to give you an overview how  [HSTS (HTTP Strict Transpo
 and [HTTP Public Key Pinning (HPKP)](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning) behave in different situations.
 
 Since HSTS is only working with a trusted certificate, I've bought a signed certificate for my subdomain ssl-test.matthias-brandt.de including its 
-private key, which is added in this repository. Feel free to play around and test different configurations!
+private key, which is added in this repository. This cert is valid until 29th January 2017. 
+
+Feel free to play around and test different configurations!
 
 Setup
 -----
