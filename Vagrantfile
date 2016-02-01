@@ -88,7 +88,7 @@ Vagrant.configure(2) do |config|
   # so it is associated with the entry made by the hostmanager plugin,
   # not localhost
   config.vm.provision "shell" do |s|
-    ssh_pub_key = File.readlines("#{Dir.home}/.ssh/id_rsa.pub").first.strip
+    ssh_pub_key = File.readlines(Dir.glob("#{Dir.home}/.ssh/*.pub").first).first.strip
     s.inline = <<-SHELL
     sed -i \"0,/#{hostname}/s///\" /etc/hosts
     mkdir -p /root/.ssh
