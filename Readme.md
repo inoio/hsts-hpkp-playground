@@ -37,6 +37,8 @@ If you want to find out your base64 fingerprint of your certificate, you can do 
 openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 ```
 
+For extracting from CSR/private key/current domain, you can have a look at https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning#Extracting_the_Base64_encoded_public_key_information.
+
 ### Logging
 All logfiles lay in ```shared/logs```, so you can easily do a ```tail -f shared/logs/*``` on your host machine to watch your server logs.
 
